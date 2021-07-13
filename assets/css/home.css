@@ -1,2 +1,22 @@
-/* header css */
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif; }
 
+#main-header {
+  background-color: black;
+  padding: 1.2rem; }
+  #main-header ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    #main-header ul li {
+      list-style-type: none; }
+      #main-header ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding-left: 1.2rem; }
+        #main-header ul li a:hover {
+          color: brown; }
+    #main-header ul #right-nav {
+      margin-right: 1.5rem; }

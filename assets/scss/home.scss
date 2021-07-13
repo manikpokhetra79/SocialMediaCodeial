@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+// header styles
+#main-header{
+background-color: black;
+padding: 1.2rem;
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    // navbar li styles
+    li{
+        list-style-type: none;
+        
+        a{
+            color: #fff;
+            text-decoration: none;
+            padding-left: 1.2rem;
+            &:hover{
+                color:brown;
+            }
+        }
+    }
+    // left nav
+    #left-nav{
+        
+    }
+    // right nav
+    #right-nav{
+        margin-right: 1.5rem;
+    }
+}
+
+}
