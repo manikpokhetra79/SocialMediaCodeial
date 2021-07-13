@@ -1,0 +1,25 @@
+{
+  "name": "codeialproject",
+  "version": "1.0.0",
+  "description": "a basic social media website with profile, friends, uploads functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manikpokhetra79/SocialMediaCodeial.git"
+  },
+  "keywords": [
+    "socialmedia"
+  ],
+  "author": "manik pokhetra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manikpokhetra79/SocialMediaCodeial/issues"
+  },
+  "homepage": "https://github.com/manikpokhetra79/SocialMediaCodeial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
