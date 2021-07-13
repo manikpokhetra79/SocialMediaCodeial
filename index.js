@@ -2,7 +2,9 @@ const express = require('express');
 const port = 8000;
 const app = express();
 
-
+// setup ejs
+app.set('views','./views');
+app.set('view engine','ejs');
 
 // route for homepage
 app.use('/',require('./routes/index'));
