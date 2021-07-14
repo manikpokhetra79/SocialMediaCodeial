@@ -3,8 +3,6 @@ const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 const sassMiddleware = require('node-sass-middleware')
 const app = express();
-
-
 // use sass middleware
 app.use(sassMiddleware({
 

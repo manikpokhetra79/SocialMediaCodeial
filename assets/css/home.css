@@ -3,6 +3,10 @@ body {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif; }
 
+#page-container {
+  position: relative;
+  min-height: 100vh; }
+
 #main-header {
   background-color: black;
   padding: 1.2rem; }
@@ -17,6 +21,29 @@ body {
         text-decoration: none;
         padding-left: 1.2rem; }
         #main-header ul li a:hover {
-          color: brown; }
+          color: #1697d3; }
     #main-header ul #right-nav {
       margin-right: 1.5rem; }
+
+#main-body {
+  padding-bottom: 5rem; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  color: #fff;
+  background-color: black;
+  display: flex;
+  align-items: center; }
+  footer p {
+    padding-left: 2rem; }
+  footer #footer-nav li {
+    list-style-type: none; }
+    footer #footer-nav li a {
+      color: #fff;
+      text-decoration: none;
+      padding-left: 1.2rem; }
+      footer #footer-nav li a:hover {
+        color: #1697d3; }
