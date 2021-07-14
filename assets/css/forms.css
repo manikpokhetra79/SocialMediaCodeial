@@ -1,0 +1,15 @@
+.form-container {
+  display: flex;
+  justify-content: center; }
+  .form-container form {
+    display: flex;
+    flex-direction: column; }
+    .form-container form input {
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      outline: none; }
+      .form-container form input[type=submit] {
+        color: white;
+        background-color: #1563d6; }
+        .form-container form input[type=submit]:hover {
+          background-color: #1579d6; }

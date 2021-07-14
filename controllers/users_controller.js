@@ -3,7 +3,6 @@ module.exports.user = function(req,res){
         title : 'Users Page'
     });
 }
-
 // action for login page
 module.exports.login = function(req,res){
     return res.render('user_login',{
