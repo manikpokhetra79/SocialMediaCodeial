@@ -17,10 +17,8 @@ module.exports.register = function(req,res){
         title : 'Register Page'
     });
 }
-
 // action for create User
 module.exports.create = function(req,res){
-
     if(req.body.password != req.body.confirm_password){
         console.log("Password not same");
         return res.redirect('back');
@@ -45,4 +43,19 @@ module.exports.create = function(req,res){
             return res.redirect('/users/login');
         }
     });
+}
+
+// action for create session
+
+module.exports.createSession = function(req,res){
+
+    return res.redirect('/');
+}
+
+// destroy session
+
+module.exports.destroySession = function(req,res){
+
+  req.logout();
+  return res.redirect('/');
 }

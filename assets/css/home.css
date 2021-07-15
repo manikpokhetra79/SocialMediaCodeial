@@ -42,7 +42,7 @@ footer {
   footer #footer-nav li {
     list-style-type: none; }
     footer #footer-nav li a {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.651);
       text-decoration: none;
       padding-left: 1.2rem; }
       footer #footer-nav li a:hover {

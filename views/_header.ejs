@@ -1,14 +1,19 @@
 <div id="navbar">
     <header id="main-header">
         <nav>
-            <ul>
-                <li id="left-nav">
+            <ul id="left-nav">
+                <li>
                    <a href="/">Codeial</a> 
                    <a href="/users">Users</a> 
                 </li>
                 <li id="right-nav">
-                    <a href="/users/login">Login</a>
-                    <a href="/users/register">Register</a> 
+                    <% if(locals.user){ %> 
+                        <a href="/users"><%= user.name %></a>
+                        <a href="/users/destroy-session">SignOut</a>
+                        <%} else {%>
+                     <a href="/users/login">Login</a>
+                    <a href="/users/register">Register</a>
+                        <% } %>
                  </li>
             </ul>
         </nav>
