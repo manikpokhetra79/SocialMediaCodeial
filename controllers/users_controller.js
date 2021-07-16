@@ -7,15 +7,24 @@ module.exports.user = function(req,res){
 }
 // action for login page
 module.exports.login = function(req,res){
-    return res.render('user_login',{
-        title : 'Login Page'
-    });
+    if(req.user){
+        return res.redirect('/');
+    }else{
+        return res.render('user_login',{
+            title : 'Login Page'
+        });
+    }
+    
 }
 // action for register page
 module.exports.register = function(req,res){
+    if(req.user){
+        return res.redirect('/');
+    }else{
     return res.render('user_register',{
         title : 'Register Page'
     });
+}
 }
 // action for create User
 module.exports.create = function(req,res){
