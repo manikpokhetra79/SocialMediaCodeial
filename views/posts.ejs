@@ -19,7 +19,7 @@
     </div>  
     <!-- post comment form -->
     <div class ="post-comments">
-        <h3>Comments</h3>
+        <h3 style="color: rgb(21, 99, 214);">Comments</h3>
         <% if(locals.user){ %> 
            <div class="form-container">
             <form action="/comments/create" method="post">
@@ -29,7 +29,14 @@
             </form>
            </div>
         <%} else {%>
-       <p> Login to Comment</p>
+       <p style="color: rgb(21, 99, 214);"> <b>Login to Comment</b></p>
         <% } %>
+    </div>
+    <div id="comments-container">
+        <ul>
+        <% for(comment of i.comments){%>
+            <%- include('_comments.ejs') %>
+        <%}%>
+        </ul>
     </div>
 </li>

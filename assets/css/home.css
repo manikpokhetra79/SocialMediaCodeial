@@ -17,11 +17,12 @@ body {
     #main-header ul li {
       list-style-type: none; }
       #main-header ul li a {
-        color: #fff;
+        color: #EF7126;
         text-decoration: none;
-        padding-left: 1.2rem; }
+        padding-left: 1.2rem;
+        font-size: 1.2rem; }
         #main-header ul li a:hover {
-          color: #1697d3; }
+          color: #8EDC9D; }
     #main-header ul #right-nav {
       margin-right: 1.5rem; }
 
@@ -56,7 +57,26 @@ body {
             margin-right: 1rem;
             color: #1697d3; }
             #main-body #main-section #posts-container ul li .post-author-details i:hover {
-              color: salmon; }
+              color: #EF7126; }
+    #main-body #main-section #comments-container ul li {
+      width: 80%;
+      border: 1px solid black; }
+      #main-body #main-section #comments-container ul li .comment-author-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        #main-body #main-section #comments-container ul li .comment-author-details small {
+          font-size: 16px;
+          font-weight: 600; }
+          #main-body #main-section #comments-container ul li .comment-author-details small i:hover {
+            color: #EF7126; }
+        #main-body #main-section #comments-container ul li .comment-author-details i {
+          margin-right: 1rem;
+          color: #1697d3;
+          transition: all 0.3s ease-out; }
+          #main-body #main-section #comments-container ul li .comment-author-details i:hover {
+            color: #218C8D;
+            transform: scale(1.05); }
   #main-body aside {
     width: 20%;
     border-left: 1px solid black; }
@@ -66,7 +86,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 5rem;
-  color: #fff;
+  color: #8EDC9D;
   background-color: black;
   display: flex;
   align-items: center; }
@@ -75,8 +95,8 @@ footer {
   footer #footer-nav li {
     list-style-type: none; }
     footer #footer-nav li a {
-      color: rgba(255, 255, 255, 0.651);
+      color: #EF7126;
       text-decoration: none;
       padding-left: 1.2rem; }
       footer #footer-nav li a:hover {
-        color: #1697d3; }
+        color: #8EDC9D; }

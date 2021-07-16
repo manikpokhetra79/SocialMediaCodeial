@@ -23,3 +23,29 @@ module.exports.create = async function(req,res){
     return res.redirect('back');
    }
 }
+
+
+// destroy
+module.exports.destroy = async function(req,res){
+
+    try {
+        let comment = await Comment.findById(req.params.id);
+        if(comment.user == req.user.id){
+            let postId = comment.post;
+            comment.remove();
+            let post = await Post.findByIdAndUpdate(postId,{
+                $pull : {
+                    comments : req.params.id
+                }
+            });
+            console.log(comment);
+            return res.redirect('back');
+        }else{
+          console.log('error','Unauthorized attempt to  delete comments');
+          return res.redirect('back');
+        }
+    } catch (error) {
+        console.log(error);
+        return res.redirect('back');
+    }
+}

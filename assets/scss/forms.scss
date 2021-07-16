@@ -7,13 +7,16 @@
         margin-bottom: 2.5rem;
         input{
             padding: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
             outline : none;
             &[type=submit]{
                 color: rgb(255, 255, 255);
-                background-color: rgb(21, 99, 214);
+                background-color: #009A3E;
+                box-shadow: 0 0 3px #009A3E;
+                border: none;
+                padding: 0.8rem;
                 &:hover{
-                    background-color: rgb(21, 121, 214);
+                    box-shadow: none;   
                 }
             }
         }
