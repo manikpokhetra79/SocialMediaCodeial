@@ -1,8 +1,28 @@
- <h1>Codeial Homepage</h1>
+ <link rel="stylesheet" href="/css/forms.css">
 
-    <h2>Hello</h2>
-         <% if(locals.user){ %> 
-        <%=locals.user.name %>
-        <%} else {%>
-            Visitor!
-        <% } %>
+ <section id="main-section">
+    <h2>Posts Timeline</h2>
+    <% if(locals.user){ %> 
+       <div class="form-container">
+        <form action="/posts/create" method="post">
+            <textarea name="content" cols="50" rows="6" placeholder="Post your mood..."></textarea>
+            <input type="submit" value="Post">
+        </form>
+       </div>
+    <%} else {%>
+    Login to Post
+    <% } %>
+    
+    <div id="posts-container">
+        <ul>
+        <% for(i of all_posts){%>
+            <%- include('posts.ejs') %>
+        <%}%>
+        </ul>
+    </div>
+ </section>
+
+<aside>
+    hello , I am a sidebar
+</aside>
+

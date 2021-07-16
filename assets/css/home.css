@@ -1,11 +1,11 @@
 body {
   margin: 0;
   font-size: 16px;
+  background-color: #F0F2F5;
   font-family: 'Montserrat', sans-serif; }
-
-#page-container {
-  position: relative;
-  min-height: 100vh; }
+  body #page-container {
+    position: relative;
+    min-height: 100vh; }
 
 #main-header {
   background-color: black;
@@ -26,7 +26,40 @@ body {
       margin-right: 1.5rem; }
 
 #main-body {
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  display: flex; }
+  #main-body #main-section {
+    display: inline-flex;
+    flex-direction: column;
+    width: 70%; }
+    #main-body #main-section #posts-container ul {
+      margin-top: 3rem;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center; }
+      #main-body #main-section #posts-container ul li {
+        width: 60%;
+        list-style-type: none;
+        background-color: #fff;
+        padding: 2rem;
+        margin-bottom: 1.5rem; }
+        #main-body #main-section #posts-container ul li .post-author-details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          #main-body #main-section #posts-container ul li .post-author-details small {
+            font-size: 16px;
+            font-weight: 600; }
+            #main-body #main-section #posts-container ul li .post-author-details small i:hover {
+              color: #1697d3; }
+          #main-body #main-section #posts-container ul li .post-author-details i {
+            margin-right: 1rem;
+            color: #1697d3; }
+            #main-body #main-section #posts-container ul li .post-author-details i:hover {
+              color: salmon; }
+  #main-body aside {
+    width: 20%;
+    border-left: 1px solid black; }
 
 footer {
   position: absolute;

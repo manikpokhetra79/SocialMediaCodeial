@@ -1,12 +1,13 @@
 body{
     margin: 0;
     font-size: 16px;
+    background-color: #F0F2F5;
     font-family: 'Montserrat', sans-serif;
-}
-// page container styles
+    // page container styles
 #page-container{
     position: relative;
     min-height: 100vh;
+}
 }
 // header styles
 #main-header{
@@ -29,10 +30,6 @@ ul{
             }
         }
     }
-    // left nav
-    #left-nav{
-        
-    }
     // right nav
     #right-nav{
         margin-right: 1.5rem;
@@ -42,6 +39,57 @@ ul{
 // main body
 #main-body{
     padding-bottom: 5rem; //same as footer height
+    display: flex;
+    // main section of page
+#main-section{
+        display: inline-flex;
+        flex-direction: column;
+        width : 70%;
+        
+// posts timeline
+#posts-container{
+    ul{
+        margin-top: 3rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        li{
+            width: 60%;
+            list-style-type: none;
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            .post-author-details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                // author name style
+                small{
+                    font-size:16px;
+                    font-weight: 600;
+                    i:hover{
+                        color:rgb(22, 151, 211)
+                    }
+                }
+                // fa style
+                i{
+                    margin-right: 1rem;
+                    color:rgb(22, 151, 211);
+                    &:hover{
+                        color:salmon;
+                    }
+                }
+            }
+        }
+    }
+       
+    }
+}
+    // aside section
+    aside{
+        width: 20%;
+        border-left: 1px solid black;
+    }
 }
 footer{
     position: absolute;
@@ -57,17 +105,17 @@ footer{
         padding-left : 2rem;
     }
     // nav bar footer
-    #footer-nav{
-        li{
-            list-style-type: none;
-            a{
-                color: rgba(255, 255, 255, 0.651);
-                text-decoration: none;
-                padding-left: 1.2rem;
-                &:hover{
-                    color:rgb(22, 151, 211);
-                }
-            }
+#footer-nav{
+li{
+    list-style-type: none;
+    a{
+        color: rgba(255, 255, 255, 0.651);
+        text-decoration: none;
+        padding-left: 1.2rem;
+        &:hover{
+            color:rgb(22, 151, 211);
         }
     }
+}
+}
 }
