@@ -57,7 +57,7 @@
                </div>
         </div>
         <div id="comments-container">
-            <ul>
+            <ul id="post-comments-${ post._id }">
             </ul>
         </div>
     </li>`)

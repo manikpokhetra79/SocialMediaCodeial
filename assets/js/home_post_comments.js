@@ -17,7 +17,7 @@ class PostComments{
     }
     createComment(postId){
     let pSelf = this;
-    console.log(pSelf);
+    // console.log(pSelf);
     this.newCommentForm.submit(function(e){
         e.preventDefault();
         let self = this; //form
@@ -27,7 +27,7 @@ class PostComments{
             data : $(self).serialize(),
             success : function(data){
                 let newComment = pSelf.newDomComment(data.data.comment);
-                $(' #comments-container>ul').prepend(newComment);
+                $(`#post-comments-${postId}`).prepend(newComment);
                 // populate to the currently created comment
                 pSelf.deleteComment($(' .delete-comment-button', newComment));
             },error: function(error){
@@ -37,7 +37,7 @@ class PostComments{
     })
     }
     newDomComment(comment){
-        return $(`<li class="comment-${ comment._id}">
+        return $(`<li id="comment-${ comment._id}">
         <div class="comment-author-details">
             <div class="comment-author-name">
                 <small>
