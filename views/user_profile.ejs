@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/profile.css">
+<div id="profile-page">
+<h1><%=profile_user.name%> | Profile Page</h1>
+<section id="user-profile">
+<div id="user-profile-pic">
+    <!-- img -->
+</div>
+<div id ="user-profile-details">
+    <p>Profile User:<%= profile_user.name%></p>
+    <p>Active User : <%= user.name%></p>
+</div>
+</section>
+<section id="profile-update-form">
+  <%if(user.id == profile_user.id){%>
+    <h2>
+        Update your Profile Details
+    </h2>
+    <div class="form-container">
+        <form action="/users/profile/update/<%= profile_user.id%>" method="post">
+        <input type="text" name="name" value="<%=profile_user.name%>">
+        <input type="email" name="email" value="<%=profile_user.email%>">
+        <input type="submit" value="Update Profile Details">
+        </form>
+    </div>
+    <%}else{%>
+        <h4>Login to update your Profile Details</h4>
+    <%}%>
+</section>
+</div>

@@ -22,7 +22,14 @@
     </div>
  </section>
 
-<aside>
-    hello , I am a sidebar
+<aside id="home-sidebar">
+    <h3 style="text-align: center;"> All Users</h3>
+    <ul>
+    <% for(user of users){%>
+         <li>
+             <a href="/users/profile/<%=user.id%>"><%=user.name%></a>
+         </li>
+    <%}%>
+    </ul>
 </aside>
 

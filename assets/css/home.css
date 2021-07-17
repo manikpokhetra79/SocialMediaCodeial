@@ -80,6 +80,16 @@ body {
   #main-body aside {
     width: 20%;
     border-left: 1px solid black; }
+    #main-body aside ul li {
+      list-style-type: none;
+      margin-bottom: 2rem; }
+      #main-body aside ul li a {
+        color: #1697d3;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: 600; }
+        #main-body aside ul li a:hover {
+          color: #218C8D; }
 
 footer {
   position: absolute;

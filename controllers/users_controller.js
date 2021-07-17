@@ -5,6 +5,35 @@ module.exports.user = function(req,res){
         title : 'Users Page'
     });
 }
+// profile page
+module.exports.profile = function(req,res){
+    User.findById(req.params.id,function(err,user){
+        return res.render('user_profile',{
+            title: 'Profile Page',
+            profile_user : user
+        });
+    })
+}
+// update profile action
+module.exports.update = async function(req,res){
+
+    if(req.user.id == req.params.id){
+        try {
+            let user = await User.findByIdAndUpdate(req.params.id,req.body);
+            console.log("Profile details successfully updated");
+            return res.redirect('back');
+        } catch (error) {
+            console.log(error);
+            return res.redirect('back');
+        }
+    }else{
+        console.log('error', 'Unauthorized!');
+        return res.status(401).send('Unauthorized');
+    }
+    
+   
+    
+}
 // action for login page
 module.exports.login = function(req,res){
     if(req.user){
