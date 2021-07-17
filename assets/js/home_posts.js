@@ -16,6 +16,7 @@
             // the below code is for to add delete functionality for every 
             // post created by ajax req..
             deletePost($(' .delete-post-button',newPost)); // this class inside of new Post
+            new PostComments(data.data.post._id);
             },
             error: function(error){
                 console.log(error.responseText);
@@ -48,7 +49,7 @@
         <div class ="post-comments">
             <h3 style="color: rgb(21, 99, 214);">Comments</h3>
             <div class="form-container">
-            <form id="new-comment-form" action="/comments/create" method="post">
+            <form id="post-${post._id}-comments-form" action="/comments/create" method="post">
                 <input type="text" name="content" placeholder="Leave your comments...">
                 <input type="hidden" name="post" value="${ post._id }" >
                 <input type="submit" value="Post your Comment">
@@ -87,6 +88,11 @@
             let deleteButton = $(' .delete-post-button' ,post);
             // call deletepost function in every post
             deletePost(deleteButton);
+             // get the post's id by splitting the id attribute
+            //  this will make every post and its comment creation dynamic
+             let postId = post.prop('id').split("-")[1];
+             //call postcomments class on all posts
+             new PostComments(postId);
 
         })
     }

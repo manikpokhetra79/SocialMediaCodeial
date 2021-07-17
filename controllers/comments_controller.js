@@ -36,7 +36,6 @@ module.exports.create = async function(req,res){
 
 // destroy
 module.exports.destroy = async function(req,res){
-
     try {
         let comment = await Comment.findById(req.params.id);
         if(comment.user == req.user.id){
