@@ -43,7 +43,8 @@ body {
         list-style-type: none;
         background-color: #fff;
         padding: 2rem;
-        margin-bottom: 1.5rem; }
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
         #main-body #main-section #posts-container ul li .post-author-details {
           display: flex;
           align-items: center;
@@ -59,8 +60,7 @@ body {
             #main-body #main-section #posts-container ul li .post-author-details i:hover {
               color: #EF7126; }
     #main-body #main-section #comments-container ul li {
-      width: 80%;
-      border: 1px solid black; }
+      width: 80%; }
       #main-body #main-section #comments-container ul li .comment-author-details {
         display: flex;
         align-items: center;

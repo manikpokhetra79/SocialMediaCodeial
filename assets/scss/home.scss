@@ -60,6 +60,7 @@ ul{
             background-color: #fff;
             padding: 2rem;
             margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             .post-author-details{
                 display: flex;
                 align-items: center;
@@ -77,6 +78,7 @@ ul{
                     margin-right: 1rem;
                     color:rgb(22, 151, 211);
                     &:hover{
+                        
                         color:#EF7126;
                     }
                 }
@@ -90,7 +92,7 @@ ul{
         ul{
             li{
                 width: 80%;
-                border : 1px solid black;
+                // border : 1px solid black;
                 .comment-author-details{
                     display: flex;
                     align-items: center;
