@@ -13,6 +13,15 @@ module.exports.create = async function(req,res){
         //push comment to post , then save the post
         await post.comments.push(comment);
         await post.save();
+        if(req.xhr){
+            comment = await comment.populate('user','name').execPopulate();
+            return res.status(200).json({
+                data : {
+                    comment : comment
+                },
+                message : "Comment created"
+            })
+        }
         console.log(post);
     }else{
         console.log("Post doesn't exist");
@@ -38,6 +47,14 @@ module.exports.destroy = async function(req,res){
                     comments : req.params.id
                 }
             });
+            if(req.xhr){
+                return res.status(200).json({
+                    data : {
+                        comment_id : req.params.id
+                    },
+                    message : "Comment deleted"
+                })
+            }
             console.log(comment);
             return res.redirect('back');
         }else{

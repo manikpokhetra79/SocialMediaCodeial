@@ -48,7 +48,7 @@
         <div class ="post-comments">
             <h3 style="color: rgb(21, 99, 214);">Comments</h3>
             <div class="form-container">
-            <form action="/comments/create" method="post">
+            <form id="new-comment-form" action="/comments/create" method="post">
                 <input type="text" name="content" placeholder="Leave your comments...">
                 <input type="hidden" name="post" value="${ post._id }" >
                 <input type="submit" value="Post your Comment">
