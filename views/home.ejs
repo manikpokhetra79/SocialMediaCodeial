@@ -4,7 +4,7 @@
     <h2>Posts Timeline</h2>
     <% if(locals.user){ %> 
        <div class="form-container">
-        <form action="/posts/create" method="post">
+        <form id="new-post-form" action="/posts/create" method="post">
             <textarea name="content" cols="50" rows="6" placeholder="Post your mood..."></textarea>
             <input type="submit" value="Post">
         </form>
@@ -33,3 +33,6 @@
     </ul>
 </aside>
 
+<!-- scripts -->
+
+<script src="/js/home_posts.js"></script>

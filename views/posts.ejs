@@ -1,4 +1,4 @@
-<li class="post-<%=i._id%>">
+<li id="post-<%=i._id%>">
     <div class="post-author-details">
     <div class="post-author-name">
         <small>
@@ -7,7 +7,7 @@
         </small>
     </div>
     <div class="post-delete-button-container">
-        <a href="/posts/destroy/<%=i._id%>">
+        <a class="delete-post-button" href="/posts/destroy/<%=i._id%>">
             <i class="far fa-window-close fa-2x"></i>
             </a>
     </div>
@@ -28,9 +28,7 @@
                 <input type="submit" value="Post your Comment">
             </form>
            </div>
-        <%} else {%>
-       <p style="color: rgb(21, 99, 214);"> <b>Login to Comment</b></p>
-        <% } %>
+        <%}%>
     </div>
     <div id="comments-container">
         <ul>
