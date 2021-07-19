@@ -9,7 +9,7 @@
                 <li id="right-nav">
                     <% if(locals.user){ %> 
                         <a href="/users/profile/<%=user.id%>"><%= user.name %></a>
-                        <a href="/users/destroy-session">SignOut</a>
+                        <a href="/users/destroy-session">Sign out</a>
                         <%} else {%>
                      <a href="/users/login">Login</a>
                     <a href="/users/register">Register</a>

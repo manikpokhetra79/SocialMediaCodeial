@@ -29,9 +29,7 @@ module.exports.update = async function(req,res){
     }else{
         console.log('error', 'Unauthorized!');
         return res.status(401).send('Unauthorized');
-    }
-    
-   
+    }  
     
 }
 // action for login page
@@ -58,7 +56,7 @@ module.exports.register = function(req,res){
 // action for create User
 module.exports.create = function(req,res){
     if(req.body.password != req.body.confirm_password){
-        console.log("Password not same");
+        req.flash('error',"Passwords not same");
         return res.redirect('back');
     }
     User.findOne({email: req.body.email},function(err,user){
@@ -73,11 +71,11 @@ module.exports.create = function(req,res){
                     console.log("Error while creating user");
                     return;
                 }
-                console.log(user.name,"successfully registered");
+                req.flash('success',user.name,"successfully registered");
                 return res.redirect('/users/login');
             })
         }else{
-            console.log("User already registered");
+            req.flash('success',"User already registered");
             return res.redirect('/users/login');
         }
     });
@@ -87,6 +85,8 @@ module.exports.create = function(req,res){
 
 module.exports.createSession = function(req,res){
 
+    req.flash('success',"Logged in successfully");
+
     return res.redirect('/');
 }
 
@@ -95,5 +95,6 @@ module.exports.createSession = function(req,res){
 module.exports.destroySession = function(req,res){
 
   req.logout();
+  req.flash('success',"Logged Out successfully");
   return res.redirect('/');
 }

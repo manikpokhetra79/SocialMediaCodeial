@@ -22,13 +22,14 @@ module.exports.create = async function(req,res){
                 message : "Comment created"
             })
         }
+        req.flash('success',"Comment created");
         console.log(post);
     }else{
-        console.log("Post doesn't exist");
+        req.flash('error',"Post doesn't exist");
     }
     return res.redirect('back');
    } catch (error) {
-       console.log(error);
+    req.flash('error',"error");
     return res.redirect('back');
    }
 }
@@ -54,10 +55,11 @@ module.exports.destroy = async function(req,res){
                     message : "Comment deleted"
                 })
             }
-            console.log(comment);
+            req.flash("Comment deleted");
             return res.redirect('back');
         }else{
-          console.log('error','Unauthorized attempt to  delete comments');
+            req.flash('error',"console.log('error','Unauthorized attempt to  delete comments');");
+          
           return res.redirect('back');
         }
     } catch (error) {

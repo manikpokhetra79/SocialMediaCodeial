@@ -30,6 +30,15 @@ class PostComments{
                 $(`#post-comments-${postId}`).prepend(newComment);
                 // populate to the currently created comment
                 pSelf.deleteComment($(' .delete-comment-button', newComment));
+                new Noty({
+                    theme : 'metroui',
+                    text : 'Comment Published',
+                    type : 'success',
+                    layout : 'topRight',       
+                    timeout : 1500,
+                    closeWith: ['click', 'button'],
+                
+                }).show();
             },error: function(error){
                 console.log(error.responseText);
             }
@@ -67,6 +76,15 @@ class PostComments{
                 url: $(deleteLink).prop('href'),
                 success: function(data){
                     $(`#comment-${data.data.comment_id}`).remove();
+                    new Noty({
+                        theme : 'metroui',
+                        text : 'Comment Deleted',
+                        type : 'success',
+                        layout : 'topRight',       
+                        timeout : 1500,
+                        closeWith: ['click', 'button'],
+                    
+                    }).show();
                 },error : function(error){
                     console.log(error.responseText);
                 }

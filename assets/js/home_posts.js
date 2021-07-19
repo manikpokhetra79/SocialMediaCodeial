@@ -17,6 +17,15 @@
             // post created by ajax req..
             deletePost($(' .delete-post-button',newPost)); // this class inside of new Post
             new PostComments(data.data.post._id);
+            new Noty({
+                theme : 'metroui',
+                text : 'Post Published',
+                type : 'success',
+                layout : 'topRight',       
+                timeout : 1500,
+                closeWith: ['click', 'button'],
+            
+            }).show();
             },
             error: function(error){
                 console.log(error.responseText);
@@ -73,6 +82,15 @@
                 success : function(data){
                     // we have to recieve the post id from server
                  $(`#post-${data.data.post_id}`).remove();
+                 new Noty({
+                    theme : 'metroui',
+                    text : 'Post Deleted',
+                    type : 'success',
+                    layout : 'topRight',       
+                    timeout : 1500,
+                    closeWith: ['click', 'button'],
+                
+                }).show();
                 },
                 error: function(error){
                     console.log(error.responseText);

@@ -8,15 +8,17 @@ const User = require('../models/users');
 passport.use(new localStrategy(
     // parameter
     {
-        usernameField  : 'email'
+        usernameField  : 'email',
+        passReqToCallback : true 
     },
-    function(email,password,done){
+    function(req,email,password,done){
         User.findOne({email : email},function(err,user){
             if(err){
                 return done(err);
             }
             if(!user || user.password != password){
-                console.log("Invalid E-mail or Password !");
+                req.flash('error',"Invalid E-mail or Password !");
+                // console.log("Invalid E-mail or Password !");
                 return done(null,false);
             }
             // if credentials are valid, provide call with the user that is authenticated
