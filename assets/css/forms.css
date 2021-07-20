@@ -9,11 +9,15 @@
       font-size: 1rem;
       outline: none;
       color: #6d6d6d; }
-      .form-container form input[type=submit] {
+      .form-container form input[type="submit"] {
         color: white;
         background-color: #009A3E;
         box-shadow: 0 0 3px #009A3E;
         border: none;
         padding: 0.8rem; }
-        .form-container form input[type=submit]:hover {
+        .form-container form input[type="submit"]:hover {
           box-shadow: none; }
+      .form-container form input[type="file"] {
+        background-color: #fff;
+        border: 1px solid black;
+        padding: 1.5rem !important; }

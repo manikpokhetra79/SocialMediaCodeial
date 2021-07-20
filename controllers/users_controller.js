@@ -1,5 +1,6 @@
 const User = require("../models/users");
-
+const fs = require('fs');
+const path = require('path');
 module.exports.user = function(req,res){
     return res.render('users',{
         title : 'Users Page'
@@ -16,18 +17,37 @@ module.exports.profile = function(req,res){
 }
 // update profile action
 module.exports.update = async function(req,res){
-
     if(req.user.id == req.params.id){
         try {
-            let user = await User.findByIdAndUpdate(req.params.id,req.body);
-            console.log("Profile details successfully updated");
-            return res.redirect('back');
+            let user = await User.findById(req.params.id);
+            // parse data from multidata form
+            User.uploadedAvatar(req,res,function(err){
+                if(err){
+                    console.log("*****Multer error",err);
+                }
+                user.name = req.body.name;
+                user.email = req.body.email;
+                if(req.file){
+
+
+                    if(user.avatar){
+                        //delete previous avatar
+                        fs.unlinkSync(path.join(__dirname ,'..',user.avatar))
+                    }
+                    // saving the path of uploaded file into avatar field in the User
+                        user.avatar = User.avatarPath + '/' + req.file.filename;
+                    
+                }
+                user.save();
+                return res.redirect('back');
+            })
+
         } catch (error) {
-            console.log(error);
+            req.flash('error',error);
             return res.redirect('back');
         }
     }else{
-        console.log('error', 'Unauthorized!');
+        req.flash('error', 'Unauthorized!');
         return res.status(401).send('Unauthorized');
     }  
     

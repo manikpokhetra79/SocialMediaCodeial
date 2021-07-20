@@ -3,6 +3,7 @@ const port = 8000;
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const sassMiddleware = require('node-sass-middleware');
+const multer  = require('multer')
 // passport, cookie,localStrategy
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -22,9 +23,10 @@ app.use(sassMiddleware({
     outputStyle: 'extended',
     prefix : '/css'
 }));
-
 // use static files
 app.use(express.static("assets"));
+// make the uploads path available to browser
+app.use('/uploads',express.static(__dirname + '/uploads'));
 app.use(cookieParser());
 // setup ejs
 app.set('views','./views');

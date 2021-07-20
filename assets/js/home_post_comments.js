@@ -1,19 +1,15 @@
 class PostComments{
-
     constructor(postId){
         this.postId = postId;
         this.postContainer = $(`#post-${postId}`); //refering to the post
         this.newCommentForm = $(`#post-${postId}-comments-form`);
         this.createComment(postId);
-
         //populating all posts wth deletebutton function
         let self = this; //here this refers to <a></a> tag
         // call for all the existing comments
         $(' .delete-comment-button', this.postContainer).each(function(){
-            self.deleteComment($(this));
-            
+            self.deleteComment($(this));         
         });
-        
     }
     createComment(postId){
     let pSelf = this;
@@ -75,6 +71,7 @@ class PostComments{
                 type:'get',
                 url: $(deleteLink).prop('href'),
                 success: function(data){
+                    console.log(data);
                     $(`#comment-${data.data.comment_id}`).remove();
                     new Noty({
                         theme : 'metroui',

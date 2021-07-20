@@ -3,6 +3,9 @@ body {
   font-size: 16px;
   background-color: #F0F2F5;
   font-family: 'Montserrat', sans-serif; }
+  body h1, body h2, body h3, body h4 {
+    color: #45a29e;
+    text-align: center; }
   body #page-container {
     position: relative;
     min-height: 100vh; }

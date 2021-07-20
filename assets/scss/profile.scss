@@ -3,5 +3,21 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    //profile pic styles
+    #user-profile-pic{
+
+        #profile-picture{
+            width: 100px;
+            
+        }
+    }
+    //profile details styles
+    #user-profile-details{
+        p{
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+
     
 }
