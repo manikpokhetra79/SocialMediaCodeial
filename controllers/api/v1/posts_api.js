@@ -18,19 +18,21 @@ module.exports.index = async function(req,res){
     });
 }
 
-
 module.exports.destroy =  async function(req,res){
     try {
         let post = await Post.findById(req.params.id);
-        console.log(post);
-        // if(post.user == req.user.id){
+        if(post.user == req.user.id){
             post.remove();
             console.log(post);
             await Comment.deleteMany({post: req.params.id});
-        // }   
-        return res.status(200).json({
-            message : "Post deleted"
-        });;
+            return res.status(200).json({
+                message : "Post and its associated comments deleted"
+            });
+        }else{
+            return res.status(401).json({
+                message : "You cannot delete this post"
+            });
+        }    
     } catch (error) {
         console.log(error);
         return res.status(500).json({
