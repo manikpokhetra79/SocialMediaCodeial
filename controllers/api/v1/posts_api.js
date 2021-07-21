@@ -17,7 +17,24 @@ module.exports.index = async function(req,res){
         posts : posts
     });
 }
-
+module.exports.create = async function(req,res){ 
+    try {
+        let post = await Post.create({
+            content: req.body.content,
+            user : req.user._id
+        });
+        console.log("Post successfully created",req.body.content);
+        return res.status(200).json({
+            message : "Post successfully created",
+            post : post
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            message : "Server Error"
+        });
+    }
+}
 module.exports.destroy =  async function(req,res){
     try {
         let post = await Post.findById(req.params.id);
