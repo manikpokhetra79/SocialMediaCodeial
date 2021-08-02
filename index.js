@@ -29,6 +29,7 @@ app.use(sassMiddleware({
 app.use(express.static("assets"));
 // make the uploads path available to browser
 app.use('/uploads',express.static(__dirname + '/uploads'));
+app.use('/assets/img/icons',express.static(__dirname + '/assets/img/icons'));
 app.use(cookieParser());
 // setup ejs
 app.set('views','./views');

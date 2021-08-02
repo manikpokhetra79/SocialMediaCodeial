@@ -13,11 +13,28 @@
         color: white;
         background-color: #009A3E;
         box-shadow: 0 0 3px #009A3E;
-        border: none;
+        border: 1px solid black;
         padding: 0.8rem; }
         .form-container form input[type="submit"]:hover {
-          box-shadow: none; }
+          box-shadow: none;
+          cursor: pointer; }
       .form-container form input[type="file"] {
         background-color: #fff;
         border: 1px solid black;
         padding: 1.5rem !important; }
+    .form-container form .social-sign-in-up {
+      font-size: 1rem;
+      background: #fff;
+      white-space: nowrap;
+      transition: all 0.2s ease-in-out;
+      padding: 0.5rem; }
+      .form-container form .social-sign-in-up:hover {
+        cursor: pointer;
+        background: #4285F4; }
+      .form-container form .social-sign-in-up a {
+        background: #4285F4;
+        display: flex;
+        text-decoration: none;
+        color: #fff; }
+        .form-container form .social-sign-in-up a p {
+          margin-left: 0.5rem; }
