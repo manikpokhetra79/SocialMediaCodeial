@@ -22,19 +22,20 @@
         background-color: #fff;
         border: 1px solid black;
         padding: 1.5rem !important; }
-    .form-container form .social-sign-in-up {
-      font-size: 1rem;
-      background: #fff;
-      white-space: nowrap;
-      transition: all 0.2s ease-in-out;
-      padding: 0.5rem; }
-      .form-container form .social-sign-in-up:hover {
-        cursor: pointer;
-        background: #4285F4; }
-      .form-container form .social-sign-in-up a {
-        background: #4285F4;
-        display: flex;
-        text-decoration: none;
-        color: #fff; }
-        .form-container form .social-sign-in-up a p {
-          margin-left: 0.5rem; }
+
+.social-sign-in-up {
+  font-size: 1rem;
+  background: #4285F4;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem; }
+  .social-sign-in-up:hover {
+    cursor: pointer;
+    background: #4f90fa; }
+  .social-sign-in-up a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem; }
+    .social-sign-in-up a p {
+      margin-left: 0.5rem; }

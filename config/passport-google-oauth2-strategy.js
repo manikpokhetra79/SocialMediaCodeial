@@ -10,10 +10,11 @@ passport.use(new googleStrategy({
     //options
     clientID : "232320544985-i7ou5fjegurva7lhto73fr8mp09m94tn.apps.googleusercontent.com",
     clientSecret : "4UYv6i7Rud6sSHL8urRGUYdk",
-    callbackURL : "http://localhost:8000/users/auth/google/callback"
+    callbackURL : "http://localhost:8000/users/auth/google/callback",
+    passReqToCallback : true 
     },
 
-    function(accessToken,refreshToken,profile,done){
+    function(req,accessToken,refreshToken,profile,done){
         //find user
       User
       .findOne({email : profile.emails[0].value})
@@ -22,10 +23,10 @@ passport.use(new googleStrategy({
             console.log("Error in google strategy-passport",error);
             return ;
         }
-        
-        console.log(profile);
+        // console.log(profile);
         if(user){
             //if user found,set this user as req.user
+            console.log("User Logged in successfully");
             return done(null,user);
         }else{
             //if not found,create the user and set it as req.user(sign in the user)
@@ -38,6 +39,8 @@ passport.use(new googleStrategy({
                     console.log("Error in creating User",error);
                     return ;
                 }
+                req.flash('success',"Registered via Google successfully")
+                console.log("User Registered successfully");
                 return done(null,user);
             })
         }

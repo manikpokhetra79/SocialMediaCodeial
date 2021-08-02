@@ -30,28 +30,29 @@
                }
 
         }
-        .social-sign-in-up{
-            font-size: 1rem;
-            background: #fff;
-            white-space: nowrap;
-            transition: all 0.2s ease-in-out;
-            padding:0.5rem;
-            &:hover{
-                cursor: pointer;
-                background: #4285F4;
-            }
-            a{
-                background: #4285F4;
-              
-                display: flex;
-                text-decoration: none;
-                color: #fff;
-                p{
-                    margin-left: 0.5rem;
-                }
-            }
-        }
+       
     }
 }
 
-// 
+// button google singin
+.social-sign-in-up{
+    font-size: 1rem;
+    background: #4285F4;
+    border : none;
+    width : 100%;
+    margin-bottom: 1rem;
+    &:hover{
+        cursor: pointer;
+        background: #4f90fa;
+    }
+    a{
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+        padding: 0.5rem;
+
+        p{
+            margin-left: 0.5rem;
+        }
+    }
+}
