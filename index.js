@@ -12,6 +12,7 @@ const MongoStore  = require('connect-mongo')(session);
 const passport = require('passport');
 const localStrategy = require('./config/passport_local');
 const JwtStrategy = require('./config/passport_jwt');
+const passportGoogle = require('./config/passport-google-oauth2-strategy')
 const db = require('./config/mongoose');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');

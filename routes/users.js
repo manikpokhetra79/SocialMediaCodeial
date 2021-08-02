@@ -16,5 +16,15 @@ router.post('/create-session',passport.authenticate(
     }
 ),usersController.createSession);
 // destroySession
-router.get('/destroy-session',usersController.destroySession)
+router.get('/destroy-session',usersController.destroySession);
+
+//passport googleStrategy routes
+router.get('/auth/google',passport.authenticate('google',{scope : ['profile','email']}));
+//callback route
+router.get('/auth/google/callback',passport.authenticate(
+    'google',{
+        failureRedirect :'/users/login'
+    }
+    ),usersController.createSession);
+
 module.exports = router;
