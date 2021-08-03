@@ -1,10 +1,8 @@
 const nodemailer = require('../config/nodemailer');
-
 //create a func to send a mail
 //email body
 exports.newComment = (comment) => {
     // console.log("Inside new comment mailer");
-
     let htmlString = nodemailer.renderTemplate({comment : comment},'/comments/new_comment.ejs');
 
     nodemailer.transporter.sendMail({
