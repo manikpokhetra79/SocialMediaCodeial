@@ -3,7 +3,8 @@
   .form-container form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 2.5rem;
+    width: 80%; }
     .form-container form input {
       padding: 1.5rem;
       font-size: 1rem;
@@ -25,13 +26,11 @@
 
 .social-sign-in-up {
   font-size: 1rem;
-  background: #4285F4;
   border: none;
-  width: 100%;
+  width: 80%;
   margin-bottom: 1rem; }
   .social-sign-in-up:hover {
-    cursor: pointer;
-    background: #4f90fa; }
+    cursor: pointer; }
   .social-sign-in-up a {
     display: flex;
     text-decoration: none;
@@ -39,3 +38,15 @@
     padding: 0.5rem; }
     .social-sign-in-up a p {
       margin-left: 0.5rem; }
+
+.google-btn {
+  background: #4285F4; }
+  .google-btn:hover {
+    background: #4f90fa; }
+
+.github-btn {
+  background: #000; }
+  .github-btn img {
+    height: 46px; }
+  .github-btn:hover {
+    background: #494949; }

@@ -5,6 +5,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 2.5rem;
+        width: 80%;
         // input style
         input{
             padding: 1.5rem;
@@ -37,13 +38,11 @@
 // button google singin
 .social-sign-in-up{
     font-size: 1rem;
-    background: #4285F4;
     border : none;
-    width : 100%;
+    width: 80%;
     margin-bottom: 1rem;
     &:hover{
         cursor: pointer;
-        background: #4f90fa;
     }
     a{
         display: flex;
@@ -54,5 +53,22 @@
         p{
             margin-left: 0.5rem;
         }
+    }
+}
+
+// buttons
+.google-btn{
+    background: #4285F4;
+    &:hover{
+        background: #4f90fa;
+    }
+}
+.github-btn{
+    background: #000;
+    img{
+        height : 46px;
+    }
+    &:hover{
+        background: rgb(73, 73, 73);
     }
 }
