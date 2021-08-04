@@ -12,7 +12,7 @@ exports.newPost = (post) => {
             console.log("Error in sending mail",err);
             return;
         }
-        console.log("Mail delevered",info);
+        // console.log("Mail delevered",info);
         return;
     })
 }
