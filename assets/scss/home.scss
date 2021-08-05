@@ -13,6 +13,16 @@ body{
     position: relative;
     min-height: 100vh;
 }
+// likes button
+.fa-thumbs-up{
+    color: #45a29e;
+}
+.toggle-like-button{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #45a29e;
+}
 }
 // header styles
 #main-header{
@@ -142,8 +152,7 @@ ul{
                 }
                 a{
                     color:rgb(22, 151, 211);
-                  
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     text-decoration: none;
                     font-weight: 600;
                     &:hover{
