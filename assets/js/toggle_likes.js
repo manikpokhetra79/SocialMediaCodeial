@@ -17,21 +17,23 @@ class ToggleLike{
             })
             .done(function(data) {
                 let likesCount = parseInt($(self).attr('data-likes'));
-                console.log(likesCount);
-                if (data.data.deleted == true){
-                    likesCount -= 1;                    
+            console.log(likesCount);
+            if (data.data.deleted == true){
+                likesCount -= 1; 
+                $(self).attr('data-likes', likesCount); 
+                $(self).html(`<i class="far fa-thumbs-up fa-2x"></i> ${likesCount} Likes`);                 
                 }else{
                     likesCount += 1;
+                    $(self).attr('data-likes', likesCount);
+                    $(self).html(`<i class="fas fa-thumbs-up fa-2x"></i> ${likesCount} Likes`);
                 }
-                $(self).attr('data-likes', likesCount);
-                $(self).html(`${likesCount} Likes`);
+                // $(self).attr('data-likes', likesCount);
+                
 
             })
             .fail(function(errData) {
                 console.log('error in completing the request');
             });
-            
-
         });
     }
 }

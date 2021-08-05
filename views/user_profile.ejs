@@ -8,10 +8,27 @@
 </div>
 <div id ="user-profile-details">
     <p>Name : <%= profile_user.name%></p>
+    
 </div>
+<%if(locals.user.id != profile_user.id){%>
+    <div id="friends-list">
+        <% let isFriend = false %>
+        <% for(let friend of populated_user.friendships){ %>
+          <% if(friend.to_user == profile_user.id || friend.from_user == profile_user.id){ %>
+            <% isFriend = true %>
+          <% } %>
+        <% } %>
+        <% if(isFriend){%>
+            <a class="toggle-friends" href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>">Remove Friend</a>
+          <% }else{%>
+            <a class="toggle-friends" href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>">Add Friend</a>
+          <% } %>
+          </div>
+    <%}%>
 </section>
+
 <section id="profile-update-form">
-  <%if(user.id == profile_user.id){%>
+  <%if(locals.user.id == profile_user.id){%>
     <h2>
         Update your Profile Details
     </h2>
@@ -28,3 +45,7 @@
     <%}%>
 </section>
 </div>
+
+<!-- scripts -->
+
+<script src="/js/toggle_friends.js"></script>
