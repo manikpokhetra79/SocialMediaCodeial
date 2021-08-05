@@ -26,6 +26,7 @@ Node.js,MongoDB,Express.js
 # Modules Used:
 
    "connect-flash": "^0.1.1",
+   
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
     "crypto": "^1.0.1",
