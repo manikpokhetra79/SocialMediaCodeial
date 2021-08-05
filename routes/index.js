@@ -6,6 +6,7 @@ router.get('/',homeController.home);
 router.use('/users',require('./users'));
 router.use('/posts',require('./posts'));
 router.use('/comments',require('./comments'));
+router.use('/likes',require('./likes'));
 // route to api's
 router.use('/api',require('./api'));
 module.exports = router;
