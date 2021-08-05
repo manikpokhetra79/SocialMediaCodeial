@@ -38,19 +38,15 @@ try {
     return res.redirect('back');
 }
 }
-
 module.exports.destroy =  async function(req,res){
 try {
     let post = await Post.findById(req.params.id);
     if(post.user == req.user.id){
-
     //delete the associated likes for the post and all its comments' likes too  
     await Like.deleteMany({likeable: post, onModel: 'Post'}); //delete likes from post (object,reference);
     await Like.deleteMany({_id: {$in: post.comments}}); // selects document in collection where _id holds the post.comment
-
-    
     post.remove();
-    console.log(post);
+    
     await Comment.deleteMany({post: req.params.id});
 
         if (req.xhr){
