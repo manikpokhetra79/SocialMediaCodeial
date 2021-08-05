@@ -26,6 +26,10 @@ class PostComments{
                 $(`#post-comments-${postId}`).prepend(newComment);
                 // populate to the currently created comment
                 pSelf.deleteComment($(' .delete-comment-button', newComment));
+
+                 //enable toogle like button functionality
+                new ToggleLike($(' .toggle-like-button', newComment));
+                
                 new Noty({
                     theme : 'metroui',
                     text : 'Comment Published',
@@ -60,7 +64,14 @@ class PostComments{
                 <p>
                 ${ comment.content}
                 </p> 
-            </div>  
+            </div> 
+        <div class="likes-container"> 
+        <small>
+        <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${ comment._id}&type=Comment">
+        0 Likes
+        </a>
+        </small>
+       </div> 
     </li>`)
     }
     // deleteLink is a attribute

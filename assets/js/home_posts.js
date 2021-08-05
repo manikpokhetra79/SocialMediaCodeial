@@ -16,7 +16,11 @@
             // the below code is for to add delete functionality for every 
             // post created by ajax req..
             deletePost($(' .delete-post-button',newPost)); // this class inside of new Post
+            //call the create comment class
             new PostComments(data.data.post._id);
+            //enable toogle like button functionality
+            new ToggleLike($(' .toggle-like-button', newPost));
+            
             new Noty({
                 theme : 'metroui',
                 text : 'Post Published',
@@ -53,7 +57,15 @@
             <p>
             ${ post.content }
             </p> 
-        </div>  
+        </div> 
+        <br> 
+        <div class="likes-container"> 
+        <small>
+        <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
+        0 Likes
+        </a>
+        </small>
+       </div> 
         <!-- post comment form -->
         <div class ="post-comments">
             <h3 style="color: rgb(21, 99, 214);">Comments</h3>
@@ -69,6 +81,7 @@
             <ul id="post-comments-${ post._id }">
             </ul>
         </div>
+        
     </li>`)
     }
     // delete post

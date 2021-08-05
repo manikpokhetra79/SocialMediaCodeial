@@ -8,13 +8,11 @@ try {
   // likes/toggle/?id=asdds&type=Post/Comment
   let likeable ;
   let deleted = false;
-
-  if(req.query.type == "Post"){
+  if(req.query.type == 'Post'){
   likeable = await Post.findById(req.query.id).populate('likes');
   }else{
     likeable = await Comment.findById(req.query.id).populate('likes');
   }
-
   //check if like already exists
   let existingLike = await Like.findOne({
       likeable : req.query.id,

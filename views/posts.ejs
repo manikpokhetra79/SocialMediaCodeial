@@ -17,6 +17,19 @@
          <%=i.content%>
         </p> 
     </div>  
+    <div class="likes-container"> 
+         <!-- display the likes of this post, if the user is logged in, then show the link to toggle likes, else, just show the count -->
+         <br>
+        <small>
+         <% if (locals.user){ %>
+             <a class="toggle-like-button" data-likes="<%= i.likes.length %>" href="/likes/toggle/?id=<%=i._id%>&type=Post">
+                <%= i.likes.length %> Likes
+             </a>
+         <% }else{ %>
+             <%= i.likes.length %> Likes
+         <% } %>
+     </small>
+    </div>
     <!-- post comment form -->
     <div class ="post-comments">
         <h3 style="color: rgb(21, 99, 214);">Comments</h3>
