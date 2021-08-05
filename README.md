@@ -25,7 +25,7 @@ Node.js,MongoDB,Express.js
 
 # Modules Used:
 
-   , 
+    
    
     "connect-flash": "^0.1.1,
     ""connect-mongo": "^3.2.0",
