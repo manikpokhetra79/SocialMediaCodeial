@@ -7,13 +7,21 @@ module.exports.user = function(req,res){
     });
 }
 // profile page
-module.exports.profile = function(req,res){
-    User.findById(req.params.id,function(err,user){
-        return res.render('user_profile',{
+module.exports.profile = async function(req,res){
+
+    try {
+        let user = await User.findById(req.params.id);
+        let populated_user = await User.findById(req.user).populate('friendships');
+         
+         return res.render('user_profile',{
             title: 'Profile Page',
-            profile_user : user
+            profile_user : user,
+            populated_user
         });
-    })
+    } catch (error) {
+        
+    }
+   
 }
 // update profile action
 module.exports.update = async function(req,res){

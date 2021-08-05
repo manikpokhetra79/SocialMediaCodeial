@@ -25,14 +25,41 @@
  </section>
 
 <aside id="home-sidebar">
-    <h2 style="text-align: center;"> All Users</h2>
+    <% if(locals.user){%>
+        <div class="friends-list">
+            <h2>Friends List</h2>
+            <ul>
+            <% for(friend of user.friendships){%>
+                <% if(locals.user._id == friend.from_user.id){%>
+             <li>
+                 <img class="profile-picture" src="<%=friend.to_user.avatar%>">
+                <a 
+                alt="profile_pic" 
+                href="/users/profile/<%=friend.to_user.id%>"><%=friend.to_user.name%></a>
+            </li>
+                <%}else{%>
+            <li>
+                <img
+                alt="profile_pic"
+                class="profile-picture" src="<%=friend.to_user.avatar%>">
+                <a href="/users/profile/<%=friend.from_user.id%>"><%=friend.from_user.name%></a>
+            </li>  
+                <%}%>
+            <%}%>
+            </ul>
+        </div>
+    <%}%>
+    <hr>
+    <div class="all_users">
+     <h2 style="text-align: center;"> All Users</h2>
     <ul>
     <% for(user of users){%>
-         <li>
-             <a href="/users/profile/<%=user.id%>"><%=user.name%></a>
-         </li>
+       <li>
+        <a href="/users/profile/<%=user.id%>"><%=user.name%></a>
+       </li>
     <%}%>
     </ul>
+    </div>
 </aside>
 
 <!-- scripts -->

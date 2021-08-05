@@ -131,8 +131,15 @@ ul{
         border-left: 1px solid black;
         ul{
             li{
+                display: flex;
+                align-items: center;
                 list-style-type: none;
+                flex-wrap: wrap;
                 margin-bottom: 2rem;
+                .profile-picture{
+                    width: 80px; 
+                    margin-right : 20px;
+                }
                 a{
                     color:rgb(22, 151, 211);
                   

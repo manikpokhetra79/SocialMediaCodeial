@@ -84,8 +84,14 @@ body {
     width: 20%;
     border-left: 1px solid black; }
     #main-body aside ul li {
+      display: flex;
+      align-items: center;
       list-style-type: none;
+      flex-wrap: wrap;
       margin-bottom: 2rem; }
+      #main-body aside ul li .profile-picture {
+        width: 80px;
+        margin-right: 20px; }
       #main-body aside ul li a {
         color: #1697d3;
         font-size: 1.2rem;
