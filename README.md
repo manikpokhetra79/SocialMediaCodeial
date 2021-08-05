@@ -1,10 +1,17 @@
 # SocialMediaCodeial
 
 Description : Codeial is a social media website which has many features like :
-Content posting, 
-Commenting, 
-Making new friends
+
+Content posting,.
+
+Commenting.
+
+Likes.
+
+Making new friends.
+
 MultiData Uploading
+
 Chat Engine(Not yet completed)
 
 # Technologies Stack:
