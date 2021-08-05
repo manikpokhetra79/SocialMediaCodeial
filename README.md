@@ -9,6 +9,7 @@ Commenting.
 Likes.
 
 Google and Github Social login options.
+
 Making new friends.
 
 MultiData Uploading.
