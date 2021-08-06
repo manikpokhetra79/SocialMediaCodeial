@@ -4,8 +4,8 @@ const crypto = require('crypto');
 const User = require('../models/users');
 
 passport.use(new GithubStrategy({
-    clientID : "1271436e68787474844b",
-    clientSecret : "b5c50a7f538d67ce803740e30942d3d4a213765a",
+    clientID : "dummy",
+    clientSecret : "dummy",
     callbackURL : "http://localhost:8000/users/auth/github/callback"
 },function(accessToken, refreshToken, profile, cb) {
 
