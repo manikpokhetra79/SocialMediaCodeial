@@ -1,30 +1,45 @@
-#chat-box {
+#user-chat-box {
   position: fixed;
-  border: 1px dotted black;
-  background: #fff;
-  overflow: scroll;
-  bottom: 0;
-  right: 5px;
-  max-height: 300px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.5px;
-  font-size: 18px; }
-  #chat-box .chat-container {
-    min-height: 200px;
-    padding: 1rem; }
-    #chat-box .chat-container .friends-message p {
+  bottom: 10px;
+  right: 10px;
+  border: 1px dashed grey;
+  height: 350px;
+  width: 300px;
+  background: white;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #user-chat-box #chat-messages-list {
+    list-style: none;
+    padding: 10px;
+    height: 70%;
+    background-color: white;
+    overflow: auto; }
+    #user-chat-box #chat-messages-list .other-message {
       text-align: left;
-      color: #45a29e; }
-    #chat-box .chat-container .user-message p {
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .other-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #ffa0a0; }
+    #user-chat-box #chat-messages-list .self-message {
       text-align: right;
-      color: #EF7126; }
-  #chat-box #chat-bar input {
-    padding: 8px;
-    font-size: 14px;
-    outline: none; }
-  #chat-box #chat-bar input[type="submit"] {
-    background: #009A3E;
-    color: #fff;
-    border: none; }
-    #chat-box #chat-bar input[type="submit"]:hover {
-      background: #09be51; }
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .self-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #a0dcff; }
+  #user-chat-box #chat-message-input-container {
+    height: 24%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    #user-chat-box #chat-message-input-container #chat-message-input {
+      height: 50%;
+      width: 70%; }
+    #user-chat-box #chat-message-input-container #send-message {
+      height: 50%;
+      width: 30%;
+      font-size: 25px;
+      color: white;
+      border: none;
+      background: #58d258; }
