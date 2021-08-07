@@ -2,7 +2,14 @@
 // io will handle the connection
 //socket is an object with multiple properties
 module.exports.chatSockets = function(socketServer){ //recieves the conenction
-    let io = require('socket.io')(socketServer);
+    //explicitly enable Cross-Origin Resource Sharing (CORS)
+    //https://socket.io/docs/v4/handling-cors/
+    let io = require('socket.io')(socketServer,{   
+        cors: {
+            origin: "http://localhost:8000",
+            methods: ["GET", "POST"]
+          }
+});
 
     io.sockets.on('connection',function(socket){
         console.log("new connection recieved",socket.id);
