@@ -10,7 +10,7 @@
                 url : $(toggleFriendsButton).attr('href'),
                 success : function(data){
                     // console.log(data.data);
-                    //removed means not friend yet
+                    //removed true means friend relation removed
                     if(data.data.removed){
                         $(toggleFriendsButton).html('Add Friend')
                     }else{
