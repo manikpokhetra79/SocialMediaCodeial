@@ -2,9 +2,7 @@
  <link rel="stylesheet" href="/css/chatbox.css">
  
  <section id="main-section">
-    <!-- <% if(flash.success && flash.success.length ){%>
-        <%= flash.success%>
-        <%}%> -->
+
     <h2>Posts Timeline</h2>
     <% if(locals.user){ %> 
        <div class="form-container">
@@ -25,9 +23,16 @@
         </ul>
     </div>
  </section>
+
  <%- include('_chatbox.ejs') %>
+
 <aside id="home-sidebar">
     <% if(locals.user){%>
+        <div id="chat-popup">
+      <i class="fas fa-comment-dots fa-2x" 
+      style=" color: #45a29e ; position:fixed; right:20px; top:3em;  cursor:pointer"
+      onclick="openChatBar()"> Open chat</i>
+        </div>
         <div class="friends-list">
             <h2>Friends List</h2>
             <ul>
@@ -84,10 +89,7 @@
   <!-- chat engine class call -->
 
   <% if(locals.user){ %> 
-   
     <script>
-        console.log("##############################################");
         new chatEngine('user-chat-box',"<%= locals.user.email %>");
-       
     </script>
  <%} %>
