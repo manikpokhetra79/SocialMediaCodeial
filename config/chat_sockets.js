@@ -18,10 +18,15 @@ module.exports.chatSockets = function(socketServer){ //recieves the conenction
         });
 
         socket.on('join_room',function(data){ //user sent a req to join the room
-            console.log("Joining request recieved",data);
-            socket.join(data.chatroom); // id a chatroom exists with the specified name and enters the user into it
-            io.in(data.chatroom).emit('user_joined',data); // emit other users that new user has joined the chat
-        })
+        console.log("Joining request recieved",data); 
+        socket.join(data.chatroom); // id a chatroom exists with the specified name and enters the user into it
+        io.in(data.chatroom).emit('user_joined',data); // emit other users that new user has joined the chat
+        });
+        
+        //detect send_message and broabcast to everyone
+        socket.on('send_message',function(data){
+            io.in(data.chatroom).emit('recieve_message',data);
+        });
 
     });
 
