@@ -16,7 +16,7 @@ MultiData Uploading.
 
 Confirmation Emails.
 
-Chat Engine(Not yet completed)
+Common Chat Engine using Socket.io
 
 # Technologies Stack:
 
@@ -26,8 +26,8 @@ Node.js,MongoDB,Express.js
 
 # Modules Used:
    
-    "connect-flash": "^0.1.1,
-    ""connect-mongo": "^3.2.0",
+      "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
     "crypto": "^1.0.1",
     "ejs": "^3.1.6",
@@ -45,7 +45,8 @@ Node.js,MongoDB,Express.js
     "passport-github": "^1.1.0",
     "passport-google-oauth": "^2.0.0",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.1.3"
 
 # How to Install :
 
