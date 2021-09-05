@@ -25,8 +25,6 @@ HTML,CSS,Javascript,jQuery,Ajax,Sass
 Node.js,MongoDB,Express.js
 
 # Modules Used:
-
-    
    
     "connect-flash": "^0.1.1,
     ""connect-mongo": "^3.2.0",
@@ -53,7 +51,7 @@ Node.js,MongoDB,Express.js
 
 Clone the project onto your local machine.
 
-Run 'npm install express' to install express node_modules.
+Run 'npm install' to install required dependencies.
 
 Run 'npm start' to start thg application.
 
