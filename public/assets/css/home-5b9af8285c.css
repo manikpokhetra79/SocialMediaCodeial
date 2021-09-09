@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: #F0F2F5;
+  font-family: 'Montserrat', sans-serif; }
+  body h1, body h2, body h3, body h4 {
+    color: #45a29e;
+    text-align: center; }
+  body #page-container {
+    position: relative;
+    min-height: 100vh; }
+  body .fa-thumbs-up {
+    color: #45a29e; }
+  body .toggle-like-button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #45a29e; }
+
+#main-header {
+  background-color: black;
+  padding: 1.2rem; }
+  #main-header ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    #main-header ul li {
+      list-style-type: none; }
+      #main-header ul li a {
+        color: #EF7126;
+        text-decoration: none;
+        padding-left: 1.2rem;
+        font-size: 1.2rem; }
+        #main-header ul li a:hover {
+          color: #8EDC9D; }
+    #main-header ul #right-nav {
+      margin-right: 1.5rem; }
+
+#main-body {
+  padding-bottom: 5rem;
+  display: flex; }
+  #main-body #main-section {
+    display: inline-flex;
+    flex-direction: column;
+    width: 70%; }
+    #main-body #main-section #posts-container ul {
+      margin-top: 3rem;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center; }
+      #main-body #main-section #posts-container ul li {
+        width: 60%;
+        list-style-type: none;
+        background-color: #fff;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+        #main-body #main-section #posts-container ul li .post-author-details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          #main-body #main-section #posts-container ul li .post-author-details small {
+            font-size: 16px;
+            font-weight: 600; }
+            #main-body #main-section #posts-container ul li .post-author-details small i:hover {
+              color: #1697d3; }
+          #main-body #main-section #posts-container ul li .post-author-details i {
+            margin-right: 1rem;
+            color: #1697d3; }
+            #main-body #main-section #posts-container ul li .post-author-details i:hover {
+              color: #EF7126; }
+    #main-body #main-section #comments-container ul li {
+      width: 80%; }
+      #main-body #main-section #comments-container ul li .comment-author-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        #main-body #main-section #comments-container ul li .comment-author-details small {
+          font-size: 16px;
+          font-weight: 600; }
+          #main-body #main-section #comments-container ul li .comment-author-details small i:hover {
+            color: #EF7126; }
+        #main-body #main-section #comments-container ul li .comment-author-details i {
+          margin-right: 1rem;
+          color: #1697d3;
+          transition: all 0.3s ease-out; }
+          #main-body #main-section #comments-container ul li .comment-author-details i:hover {
+            color: #218C8D;
+            transform: scale(1.05); }
+  #main-body aside {
+    width: 20%;
+    border-left: 1px solid black; }
+    #main-body aside ul li {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      flex-wrap: wrap;
+      margin-bottom: 2rem; }
+      #main-body aside ul li .profile-picture {
+        width: 80px;
+        margin-right: 20px; }
+      #main-body aside ul li a {
+        color: #1697d3;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 600; }
+        #main-body aside ul li a:hover {
+          color: #218C8D; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  color: #8EDC9D;
+  background-color: black;
+  display: flex;
+  align-items: center; }
+  footer p {
+    padding-left: 2rem; }
+  footer #footer-nav li {
+    list-style-type: none; }
+    footer #footer-nav li a {
+      color: #EF7126;
+      text-decoration: none;
+      padding-left: 1.2rem; }
+      footer #footer-nav li a:hover {
+        color: #8EDC9D; }

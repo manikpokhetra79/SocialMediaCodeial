@@ -1,0 +1,47 @@
+::1 - - [09/Sep/2021:14:15:35 +0000] "GET / HTTP/1.1" 200 5968 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:15:35 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:15:37 +0000] "GET /users/login HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:15:37 +0000] "GET /assets/img/icons/btn_google_dark_focus_ios.svg HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:15:37 +0000] "GET /assets/img/icons/GitHub-Mark-Light-64px.png HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+[0mGET /users/login [36m304[0m 10.078 ms - -[0m
+[0mGET /assets/img/icons/btn_google_dark_focus_ios.svg [36m304[0m 2.465 ms - -[0m
+[0mGET /assets/img/icons/GitHub-Mark-Light-64px.png [36m304[0m 3.164 ms - -[0m
+[0mGET / [36m304[0m 67.614 ms - -[0m
+[0mGET /users [36m302[0m 4.895 ms - 68[0m
+[0mGET /users/login [36m304[0m 3.651 ms - -[0m
+[0mGET /assets/img/icons/btn_google_dark_focus_ios.svg [36m304[0m 0.446 ms - -[0m
+[0mGET /assets/img/icons/GitHub-Mark-Light-64px.png [36m304[0m 0.793 ms - -[0m
+[0mGET /users/auth/google [36m302[0m 2.758 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWi8OC0Z8x_OsbILrkKKnH_5JMWfMEVoYUfmi-9sKTfRXen86-FqNPWZna_q5ziJPQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none [36m302[0m 895.084 ms - 46[0m
+[0mGET / [32m200[0m 45.092 ms - 9354[0m
+[0mGET /users [32m200[0m 5.745 ms - 2285[0m
+[0mGET /users/destroy-session [36m302[0m 3.618 ms - 46[0m
+[0mGET / [32m200[0m 14.015 ms - 6222[0m
+[0mGET / [32m200[0m 11.898 ms - 5968[0m
+[0mGET /users [36m302[0m 2.009 ms - 68[0m
+[0mGET /users/login [36m304[0m 3.516 ms - -[0m
+[0mGET /assets/img/icons/btn_google_dark_focus_ios.svg [36m304[0m 0.381 ms - -[0m
+[0mGET /assets/img/icons/GitHub-Mark-Light-64px.png [36m304[0m 0.703 ms - -[0m
+[0mGET /users/auth/github [36m302[0m 2.334 ms - 0[0m
+[0mGET /users/auth/github/callback?code=d5aee533e97dab1abe50 [36m302[0m 1287.747 ms - 46[0m
+[0mGET / [32m200[0m 20.337 ms - 9354[0m
+[0mGET /users/destroy-session [36m302[0m 4.186 ms - 46[0m
+[0mGET / [32m200[0m 11.650 ms - 6222[0m
+[0mGET / [32m200[0m 13.584 ms - 5968[0m
+[0mGET /users/login [36m304[0m 3.743 ms - -[0m
+[0mGET /assets/img/icons/btn_google_dark_focus_ios.svg [36m304[0m 0.307 ms - -[0m
+[0mGET /assets/img/icons/GitHub-Mark-Light-64px.png [36m304[0m 0.484 ms - -[0m
+::1 - - [09/Sep/2021:14:20:31 +0000] "GET /users/login HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:31 +0000] "GET /assets/img/icons/btn_google_dark_focus_ios.svg HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:31 +0000] "GET /assets/img/icons/GitHub-Mark-Light-64px.png HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:35 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:37 +0000] "GET /users/login HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:37 +0000] "GET /assets/img/icons/btn_google_dark_focus_ios.svg HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:14:20:37 +0000] "GET /assets/img/icons/GitHub-Mark-Light-64px.png HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+[0mGET / [36m304[0m 35.644 ms - -[0m
+[0mGET / [36m304[0m 18.657 ms - -[0m
+::1 - - [09/Sep/2021:15:01:37 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:15:01:38 +0000] "GET /users HTTP/1.1" 302 68 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:15:01:38 +0000] "GET /users/login HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:15:01:38 +0000] "GET /assets/img/icons/btn_google_dark_focus_ios.svg HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+::1 - - [09/Sep/2021:15:01:38 +0000] "GET /assets/img/icons/GitHub-Mark-Light-64px.png HTTP/1.1" 304 - "http://localhost:8000/users/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
