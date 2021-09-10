@@ -4,5 +4,6 @@ node_modules/
 # Misc files
 .DS_Store
 
+.prettierrc
 # Ignore redis binary dump (dump.rdb) files
 *.rdb
