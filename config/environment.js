@@ -10,6 +10,34 @@ const accessLogStream = rfs.createStream('access.log', {
   path: logDirectory,
 });
 
+const development = {
+  name: 'development',
+  asset_path: '/assets',
+  session_cookie_key: 'blahsomething',
+  db: 'codeial_db1',
+  smtp: {
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'testingbymanik',
+      pass: process.env.CODEIAL_GMAIL_PASSWORD,
+    },
+  },
+  google_clientID: process.env.CODEIAL_GOOGLE_CLIENT_ID,
+  google_clientSecret: process.env.CODEIAL_GOOGLE_CLIENT_SECRET,
+  google_callbackURL: process.env.CODEIAL_GOOGLE_CALLBACK_URL,
+
+  github_clientID: process.env.CODEIAL_GITHUB_CLIENT_ID,
+  github_clientSecret: process.env.CODEIAL_GITHUB_CLIENT_SECRET,
+  github_callbackURL: process.env.CODEIAL_GITHUB_CALLBACK_URL,
+
+  morgan: {
+    mode: 'dev',
+    options: { stream: accessLogStream },
+  },
+};
 
 const production = {
   name: 'production',

@@ -4,6 +4,7 @@ const logger = require('morgan');
 const port = 8000;
 // require('dotenv').config();
 const app = express();
+require('./config/view-helpers')(app);
 const expressLayouts = require('express-ejs-layouts');
 const sassMiddleware = require('node-sass-middleware');
 const multer = require('multer');
@@ -46,19 +47,19 @@ if (env.name == 'development') {
 
 // use static files
 app.use(express.static(path.join(__dirname, env.asset_path)));
-
+app.use(express.static(path.join(__dirname, '/public', env.asset_path)));
 // make the uploads path available to browser
 app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/assets/img/icons', express.static(__dirname + '/assets/img/icons'));
 
 // logger : morgan
-
 app.use(logger(env.morgan.mode, env.morgan.options));
-app.use('/assets/img/icons', express.static(__dirname + '/assets/img/icons'));
-app.use(cookieParser());
 
+app.use(cookieParser());
 // setup ejs
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
 // use express layouts
 app.use(expressLayouts);
 app.set('layout extractScripts', true);

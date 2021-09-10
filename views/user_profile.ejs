@@ -1,51 +1,61 @@
-<link rel="stylesheet" href="/css/profile.css">
-<link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="<%= assetPath('css/profile.css') %>" />
+<link rel="stylesheet" href="<%= assetPath('css/forms.css') %>" />
 <div id="profile-page">
-<section id="user-profile">
-<h1><%=profile_user.name%> | Profile Page</h1>
-<div id="user-profile-pic">
-    <img id="profile-picture" src="<%=profile_user.avatar%>" alt="profile_pic">
-</div>
-<div id ="user-profile-details">
-    <p>Name : <%= profile_user.name%></p>
-    
-</div>
-<%if(locals.user.id != profile_user.id){%>
+  <section id="user-profile">
+    <h1><%=profile_user.name%> | Profile Page</h1>
+    <div id="user-profile-pic">
+      <img
+        id="profile-picture"
+        src="<%=profile_user.avatar%>"
+        alt="profile_pic"
+      />
+    </div>
+    <div id="user-profile-details">
+      <p>Name : <%= profile_user.name%></p>
+    </div>
+    <%if(locals.user.id != profile_user.id){%>
     <div id="friends-list">
-        <% let isFriend = false %>
-        <% for(let friend of populated_user.friendships){ %>
-          <% if(friend.to_user == profile_user.id || friend.from_user == profile_user.id){ %>
-            <% isFriend = true %>
-          <% } %>
-        <% } %>
-        <% if(isFriend){%>
-            <a class="toggle-friends" href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>">Remove Friend</a>
-          <% }else{%>
-            <a class="toggle-friends" href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>">Add Friend</a>
-          <% } %>
-          </div>
+      <% let isFriend = false %> <% for(let friend of
+      populated_user.friendships){ %> <% if(friend.to_user == profile_user.id ||
+      friend.from_user == profile_user.id){ %> <% isFriend = true %> <% } %> <%
+      } %> <% if(isFriend){%>
+      <a
+        class="toggle-friends"
+        href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>"
+        >Remove Friend</a
+      >
+      <% }else{%>
+      <a
+        class="toggle-friends"
+        href="/friends/toggle/?fromid=<%=user.id%>&toid=<%=profile_user.id%>"
+        >Add Friend</a
+      >
+      <% } %>
+    </div>
     <%}%>
-</section>
+  </section>
 
-<section id="profile-update-form">
-  <%if(locals.user.id == profile_user.id){%>
-    <h2>
-        Update your Profile Details
-    </h2>
+  <section id="profile-update-form">
+    <%if(locals.user.id == profile_user.id){%>
+    <h2>Update your Profile Details</h2>
     <div class="form-container">
-        <form action="/users/profile/update/<%= profile_user.id%>" method="post" enctype="multipart/form-data">
-        <input type="text" name="name" value="<%=profile_user.name%>">
-        <input type="email" name="email" value="<%=profile_user.email%>">
-        <input type ="file" name="avatar" placeholder ="Profile Picture">
-        <input type="submit" value="Update Profile Details">
-        </form>
+      <form
+        action="/users/profile/update/<%= profile_user.id%>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="text" name="name" value="<%=profile_user.name%>" />
+        <input type="email" name="email" value="<%=profile_user.email%>" />
+        <input type="file" name="avatar" placeholder="Profile Picture" />
+        <input type="submit" value="Update Profile Details" />
+      </form>
     </div>
     <%}else{%>
-        <h4>Login to update your Profile Details</h4>
+    <h4>Login to update your Profile Details</h4>
     <%}%>
-</section>
+  </section>
 </div>
 
 <!-- scripts -->
 
-<script src="/js/toggle_friends.js"></script>
+<script src="<%= assetPath('js/toggle_friends.js') %>"></script>

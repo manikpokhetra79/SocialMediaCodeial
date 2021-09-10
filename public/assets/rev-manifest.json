@@ -1,0 +1,12 @@
+{
+  "css/chatbox.css": "css/chatbox-df3fd97b60.css",
+  "css/forms.css": "css/forms-a134298332.css",
+  "css/home.css": "css/home-40c8fd60da.css",
+  "css/profile.css": "css/profile-127ea46325.css",
+  "js/chat_engine.js": "js/chat_engine-babcd57508.js",
+  "js/home_comments.js": "js/home_comments-2867e65d89.js",
+  "js/home_post_comments.js": "js/home_post_comments-878abb31c9.js",
+  "js/home_posts.js": "js/home_posts-19f9c07b2d.js",
+  "js/toggle_friends.js": "js/toggle_friends-cc58b41904.js",
+  "js/toggle_likes.js": "js/toggle_likes-3e1b94c2a0.js"
+}
